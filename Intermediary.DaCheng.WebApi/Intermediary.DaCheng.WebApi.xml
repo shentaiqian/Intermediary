@@ -1,0 +1,593 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Intermediary.DaCheng.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Intermediary.DaCheng.WebApi.Controllers.DepartmentController">
+            <summary>
+            科室信息
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Controllers.DoctorController">
+            <summary>
+            医生信息
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Controllers.PatientController">
+            <summary>
+            病人相关信息
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Controllers.WeatherForecastController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Controllers.WeatherForecastController.#ctor(Microsoft.Extensions.Logging.ILogger{Intermediary.DaCheng.WebApi.Controllers.WeatherForecastController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Controllers.WeatherForecastController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Entity.Department">
+            <summary>
+            科室
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Department.ID">
+            <summary>
+            科室 ID
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Department.MC">
+            <summary>
+            科室名称
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Entity.Doctor">
+            <summary>
+            医生信息
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Doctor.ID">
+            <summary>
+            医生 ID
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Doctor.XM">
+            <summary>
+            医生姓名
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Doctor.XB">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Doctor.JJ">
+            <summary>
+            医生简介
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Doctor.KSID">
+            <summary>
+            所属科室 ID
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Entity.Enum.GenderEnum">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:Intermediary.DaCheng.WebApi.Entity.Enum.GenderEnum.Male">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Intermediary.DaCheng.WebApi.Entity.Enum.GenderEnum.Female">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Intermediary.DaCheng.WebApi.Entity.Enum.GenderEnum.Unknown">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Entity.Enum.InsuranceEnum">
+            <summary>
+            保险类别
+            </summary>
+        </member>
+        <member name="F:Intermediary.DaCheng.WebApi.Entity.Enum.InsuranceEnum.Yes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Intermediary.DaCheng.WebApi.Entity.Enum.InsuranceEnum.No">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Entity.Patient">
+            <summary>
+            病人信息
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.BRID">
+            <summary>
+            HIS 中的病人 ID
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.XM">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.XB">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.NL">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.CSRQ">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.SFZH">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.DH">
+            <summary>
+            电话
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.JTDZ">
+            <summary>
+            家庭地址
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.BXLB">
+            <summary>
+            保险类别
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.MZYE">
+            <summary>
+            门诊预交余额
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Entity.Patient.ZYCS">
+            <summary>
+            住院次数
+            </summary>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Filter.NLogFilterAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Filter.NLogFilterAttribute.#ctor(Microsoft.Extensions.Logging.ILogger{Intermediary.DaCheng.WebApi.Filter.NLogFilterAttribute})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Filter.NLogFilterAttribute.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Filter.NLogFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Util.Extension.Extensions">
+            <summary>
+            数据类型转换
+            </summary>
+            <summary>
+            自定义异常
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToLong(System.Object)">
+            <summary>
+            将object转换为long，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToLong(System.String,System.Int64)">
+            <summary>
+            将object转换为long，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToInt(System.Object)">
+            <summary>
+            将object转换为int，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToInt(System.Object,System.Int32)">
+            <summary>
+            将object转换为int，若转换失败，则返回指定值。不抛出异常。 
+            null返回默认值
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToShort(System.Object)">
+            <summary>
+            将object转换为short，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToShort(System.Object,System.Int16)">
+            <summary>
+            将object转换为short，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDecimal(System.Object,System.Decimal)">
+            <summary>
+            将object转换为demical，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDecimal(System.Object)">
+            <summary>
+            将object转换为demical，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToBool(System.Object)">
+            <summary>
+            将object转换为bool，若转换失败，则返回false。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToBool(System.Object,System.Boolean)">
+            <summary>
+            将object转换为bool，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToFloat(System.Object)">
+            <summary>
+            将object转换为float，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToFloat(System.Object,System.Single)">
+            <summary>
+            将object转换为float，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToGuid(System.String)">
+            <summary>
+            将string转换为Guid，若转换失败，则返回Guid.Empty。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDateTime(System.String)">
+            <summary>
+            将string转换为DateTime，若转换失败，则返回日期最小值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDateTime(System.String,System.Nullable{System.DateTime})">
+            <summary>
+            将string转换为DateTime，若转换失败，则返回默认值。  
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToString(System.Object)">
+            <summary>
+            将object转换为string，若转换失败，则返回""。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDouble(System.Object)">
+            <summary>
+            将object转换为double，若转换失败，则返回0。不抛出异常。  
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.ParseToDouble(System.Object,System.Double)">
+            <summary>
+            将object转换为double，若转换失败，则返回指定值。不抛出异常。  
+            </summary>
+            <param name="str"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.CastSuper``1(System.Collections.IEnumerable)">
+            <summary>
+            强制转换类型
+            </summary>
+            <typeparam name="TResult"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.Extension.Extensions.GetOriginalException(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Util.JsonHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.JsonHelper.SerializeJson``1(``0)">
+            <summary>
+            将实体类序列化为JSON
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.JsonHelper.DeserializeJson``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="Json"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.JsonHelper.ToJObject(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Json"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Util.StringJsonConverter">
+            <summary>
+            Json数据返回到前端js的时候，把数值很大的long类型转成字符串
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.StringJsonConverter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.StringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.StringJsonConverter.CanConvert(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.StringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Util.DateTimeJsonConverter">
+            <summary>
+            DateTime类型序列化的时候，转成指定的格式
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.DateTimeJsonConverter.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.DateTimeJsonConverter.CanConvert(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.DateTimeJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.DateTimeJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.Util.LogHelper">
+            <summary>
+            日志帮助类
+            </summary>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Trace(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Debug(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Info(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Warn(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Error(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Error(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Fatal(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.Fatal(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Intermediary.DaCheng.WebApi.Util.LogHelper.GetExceptionMessage(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Intermediary.DaCheng.WebApi.WeatherForecast">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.WeatherForecast.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.WeatherForecast.TemperatureC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.WeatherForecast.TemperatureF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Intermediary.DaCheng.WebApi.WeatherForecast.Summary">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
